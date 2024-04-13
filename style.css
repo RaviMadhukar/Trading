@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    transition: 0.4s ease;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: Kalam;
+}
+
+/* *****************************************Header serction************************************** */
+.header{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: black;
+    z-index: 100;
+}
+
+.header h2{
+    color: white;
+    font-size: 1.8rem;
+}
+
+.header .logo{
+    display: flex;
+}
+
+.header .logo img{
+    width: 60px;
+}
+
+.header .navbar{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.header .navbar a{
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    padding: 0 1rem;
+    font-weight: 900;
+    transition:  ease 0.2s;
+}
+
+.header .navbar a:hover{
+    color: orange;
+    transform: scaleX(1.2);
+}
+
+/* *************************************slider section********************************** */
+
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    background: url(image/bg1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero .swiper .slide{
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    padding: 3.5rem 12.5%;
+}
+
+.hero .swiper .slide .hero-col{
+    flex: 1 1 20rem;
+    text-align: justify;
+
+}
+
+.hero .swiper .slide .hero-col img{
+    width: 100%;
+    height: 27rem;
+    animation: animate 3s linear infinite;
+}
+
+@keyframes animate{
+    0%{transform: translateY(0px);}
+    40%{transform: translateY(-50px);}
+    80%{transform: translateY(40px);}
+    0%{transform: translateY(0px);}
+
+}
+
+.hero .swiper .slide .hero-col h1{
+    color: aliceblue;
+    font-size: 3.2rm;
+    text-transform: uppercase;
+    padding-bottom: 1rem;
+}
+
+.hero .swiper .slide .hero-col p{
+    color: aliceblue;
+    font-size: 14px;
+    padding-bottom: 3rem;
+}
+
+.hero .swiper .slide .hero-col .btn{
+    background: orangered;
+    padding: 0.9rem 3.4rem;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transform: 0.5s ease;
+    font-weight: bolder;
+}
+
+.hero .swiper .slide .hero-col .btn:hover{
+    background-color: orange;
+    color: black;
+}
+
+.hero .swiper .swiper-pagination-bullet{
+    width: 20px;
+    height: 20px;
+    background: white;
+}
