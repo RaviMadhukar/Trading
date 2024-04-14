@@ -3,7 +3,7 @@ var swiper = new Swiper(".mySwiper", {
     centeredSlides: true,
     loop:true,
     autoplay: {
-      delay: 3000,
+      delay: 3500,
       disableOnInteraction: false,
     },
     pagination: {
@@ -11,3 +11,12 @@ var swiper = new Swiper(".mySwiper", {
       clickable: true,
     },
   });
+
+  // *******************************************navbar toggle
+
+  let menuBtn = document.querySelector("#menuBtn");
+  let navbar = document.querySelector(".navbar");
+  
+  menuBtn.onclick = () =>{
+    navbar.classList.toggle("active");
+  }

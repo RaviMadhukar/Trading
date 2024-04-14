@@ -23,6 +23,7 @@
     width: 100%;
     background: black;
     z-index: 100;
+    box-shadow: 1px 10px 10px rgb(160, 159, 159);
 }
 
 .header h2{
@@ -95,8 +96,8 @@
 
 @keyframes animate{
     0%{transform: translateY(0px);}
-    40%{transform: translateY(-50px);}
-    80%{transform: translateY(40px);}
+    40%{transform: translateY(-40px);}
+    80%{transform: translateY(30px);}
     0%{transform: translateY(0px);}
 
 }
@@ -135,4 +136,54 @@
     width: 20px;
     height: 20px;
     background: white;
+}
+
+#menuBtn{
+    color: white;
+    font-size: 40px;
+    display: none;
+}
+
+/* ************************************************Mobile User********************************************** */
+
+@media(max-width:991px){
+    .header .navbar{
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 4rem;
+        width: 100%;
+        background: grey;
+        text-align: center;
+    }
+
+    .header .navbar.active{
+        display: block;
+    }
+
+    #menuBtn{
+        display: block;
+    }
+
+    .header .navbar a{
+        display: block;
+        margin-top: 1rem;
+    }
+}
+
+@media(max-width:768px){
+    .hero{
+        min-height: 110px;
+    }
+
+    .hero .swiper .slide{
+        flex-direction: column;
+        margin-top: 80px;
+    }
+
+    .hero .swiper .slide .hero-col img{
+        height: auto;
+        margin-bottom: 12rem;
+    }
+    
 }
